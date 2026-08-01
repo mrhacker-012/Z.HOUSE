@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Z.House | L'Immobilier du Futur</title>
+    <title>Z.House | Immobilier de Prestige</title>
     
     <!-- Frameworks & Fonts -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -19,7 +19,7 @@
         .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.1); }
         .gold-grad { background: linear-gradient(135deg, #f39c12, #e67e22); }
         
-        /* Animation flottante des éléments */
+        /* Animation flottante */
         @keyframes float { 0%, 100% { transform: translateY(0px) rotate(0deg); } 50% { transform: translateY(-20px) rotate(1deg); } }
         .floating { animation: float 6s ease-in-out infinite; }
 
@@ -37,27 +37,27 @@
 </head>
 <body>
 
-    <!-- BARRE DE NAVIGATION -->
-    <nav class="fixed w-full z-50 p-4">
-        <div class="max-w-7xl mx-auto glass rounded-[30px] p-4 flex justify-between items-center px-6 md:px-12">
-            <div class="flex items-center gap-6">
-                <!-- LOGO AGRANDI -->
-                <img src="logo_z_house.png" alt="Z.House Logo" class="h-16 md:h-24 w-auto object-contain">
-                <div class="hidden lg:block border-l-2 border-orange-500/30 pl-6">
-                    <p class="text-[11px] uppercase tracking-[0.4em] text-orange-500 font-bold leading-tight">Réalisez vos rêves<br>immobiliers</p>
+    <!-- BARRE DE NAVIGATION (Logo Massif) -->
+    <nav class="fixed w-full z-50 p-4 md:p-6">
+        <div class="max-w-7xl mx-auto glass rounded-[40px] p-5 flex justify-between items-center px-8 md:px-16">
+            <div class="flex items-center gap-8">
+                <!-- LOGO ULTRA AGRANDI -->
+                <img src="logo_z_house.png" alt="Z.House Logo" class="h-24 md:h-40 w-auto object-contain transform scale-110 md:scale-125 transition-transform duration-500 hover:scale-135">
+                
+                <div class="hidden xl:block border-l-4 border-orange-500 pl-8">
+                    <p class="text-sm uppercase tracking-[0.5em] text-orange-500 font-black leading-tight italic">RÉALISEZ VOS RÊVES<br>IMMOBILIERS</p>
                 </div>
             </div>
-            <div class="flex items-center gap-4">
-                <a href="https://wa.me/243840627003" class="gold-grad text-black font-black text-xs md:text-sm px-8 py-4 rounded-2xl shadow-2xl hover:scale-105 transition uppercase tracking-widest">
-                    WhatsApp Direct
+            <div class="flex items-center gap-6">
+                <a href="https://wa.me/243840627003" class="gold-grad text-black font-black text-sm md:text-lg px-10 py-5 rounded-[25px] shadow-2xl hover:scale-105 transition uppercase tracking-widest">
+                    WhatsApp
                 </a>
             </div>
         </div>
     </nav>
 
     <!-- ACCUEIL (HERO) -->
-    <section class="relative min-h-screen flex items-center justify-center pt-24">
-        <!-- Banner Background -->
+    <section class="relative min-h-screen flex items-center justify-center pt-32">
         <div class="absolute inset-0 z-0">
             <img src="https://i.postimg.cc/wy149Hsz/banner.jpg" class="w-full h-full object-cover">
             <div class="absolute inset-0 hero-overlay"></div>
@@ -65,14 +65,14 @@
 
         <div class="relative z-10 text-center px-6" data-aos="zoom-out" data-aos-duration="1500">
             <h1 class="text-6xl md:text-9xl font-title font-black mb-8 leading-tight tracking-tighter">
-                RESPIREZ L’AIR <br> <span class="text-orange-500 italic">DE LA NATURE</span>
+                L'AIR PUR <br> <span class="text-orange-500 italic">DE LA NATURE</span>
             </h1>
-            <p class="max-w-3xl mx-auto text-gray-200 text-xl md:text-3xl mb-12 font-light italic leading-relaxed">
-                "Investissez à Moanda, au cœur d’un cadre calme, verdoyant et riche en opportunités stratégiques."
+            <p class="max-w-4xl mx-auto text-gray-200 text-2xl md:text-4xl mb-12 font-light italic leading-relaxed">
+                Investissez à Moanda, dans un cadre prestigieux et stratégique.
             </p>
-            <div class="flex flex-col md:flex-row justify-center gap-6">
-                <a href="#moanda" class="gold-grad px-14 py-6 rounded-3xl font-black text-black text-xl hover:shadow-[0_0_30px_rgba(243,156,18,0.4)] transition uppercase">Nos Terrains</a>
-                <a href="#contact" class="glass px-14 py-6 rounded-3xl font-black text-xl hover:bg-white/10 transition border border-white/20 uppercase">Nous Contacter</a>
+            <div class="flex flex-col md:flex-row justify-center gap-8">
+                <a href="#moanda" class="gold-grad px-16 py-7 rounded-3xl font-black text-black text-2xl hover:shadow-[0_0_50px_rgba(243,156,18,0.5)] transition uppercase tracking-tighter">Nos Terrains</a>
+                <a href="#contact" class="glass px-16 py-7 rounded-3xl font-black text-2xl hover:bg-white/10 transition border border-white/20 uppercase tracking-tighter">Contact Direct</a>
             </div>
         </div>
     </section>
@@ -80,37 +80,30 @@
     <!-- SECTION MOANDA -->
     <section id="moanda" class="py-32 px-6 max-w-7xl mx-auto">
         <div class="text-center mb-20" data-aos="fade-up">
-            <h2 class="text-orange-500 font-black tracking-[0.5em] text-sm uppercase mb-4">Investissement de Choix</h2>
-            <h3 class="text-5xl md:text-7xl font-title font-black uppercase">MOANDA - L'OCEAN</h3>
+            <h2 class="text-orange-500 font-black tracking-[0.5em] text-sm uppercase mb-4 italic">Z.House Moanda</h2>
+            <h3 class="text-5xl md:text-8xl font-title font-black uppercase tracking-tighter">VUE SUR L'OCÉAN</h3>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
             <div class="space-y-10" data-aos="fade-right">
-                <div class="glass p-10 rounded-[50px] border-l-8 border-orange-500">
-                    <p class="text-gray-300 leading-relaxed text-xl">
-                        Un cadre éco-touristique exceptionnel entre l’Océan Atlantique et le Fleuve Congo. À proximité de la <strong>Zone Économique Spéciale</strong>, du futur port de Banana et des plages emblématiques.
+                <div class="glass p-12 rounded-[50px] border-l-[10px] border-orange-500 shadow-2xl">
+                    <p class="text-gray-200 leading-relaxed text-2xl font-light">
+                        Proche du <span class="text-orange-500 font-bold">Port de Banana</span> et de la Zone Économique Spéciale. Un emplacement industriel et résidentiel unique en RDC.
                     </p>
                 </div>
 
                 <div class="grid grid-cols-2 gap-8">
-                    <div class="glass p-8 rounded-[35px] text-center border-orange-500/20">
-                        <p class="text-xs uppercase text-gray-400 mb-2">À partir de</p>
-                        <p class="text-4xl font-black text-orange-500">3.500$</p>
+                    <div class="glass p-10 rounded-[40px] text-center border-2 border-orange-500/20">
+                        <p class="text-sm uppercase text-gray-400 mb-2 font-bold tracking-widest">Prix Cash</p>
+                        <p class="text-5xl font-black text-orange-500">3.500$</p>
                     </div>
-                    <div class="glass p-8 rounded-[35px] text-center border-orange-500/20">
-                        <p class="text-xs uppercase text-gray-400 mb-2">Surface</p>
-                        <p class="text-4xl font-black italic">20x20m</p>
+                    <div class="glass p-10 rounded-[40px] text-center border-2 border-orange-500/20">
+                        <p class="text-sm uppercase text-gray-400 mb-2 font-bold tracking-widest">Dimension</p>
+                        <p class="text-5xl font-black italic">20x20m</p>
                     </div>
                 </div>
-
-                <ul class="space-y-4 text-lg">
-                    <li class="flex items-center gap-4"><span class="bg-orange-500 text-black rounded-full w-6 h-6 flex items-center justify-center font-bold text-xs">✓</span> Usage Résidentiel ou Commercial</li>
-                    <li class="flex items-center gap-4"><span class="bg-orange-500 text-black rounded-full w-6 h-6 flex items-center justify-center font-bold text-xs">✓</span> 50 Terrains Disponibles</li>
-                    <li class="flex items-center gap-4"><span class="bg-orange-500 text-black rounded-full w-6 h-6 flex items-center justify-center font-bold text-xs">✓</span> Titre Foncier Garanti</li>
-                </ul>
             </div>
 
-            <!-- Galerie Photos Moanda -->
             <div class="grid grid-cols-2 gap-6">
                 <div class="img-card floating" data-aos="zoom-in"><img src="https://i.postimg.cc/XZHDMXq9/1.jpg"></div>
                 <div class="img-card floating" style="animation-delay: 1s;" data-aos="zoom-in"><img src="https://i.postimg.cc/DWjYVm0p/2.jpg"></div>
@@ -120,85 +113,60 @@
         </div>
     </section>
 
-    <!-- MODALITÉS DE PAIEMENT -->
-    <section class="py-24 px-6 bg-black/30">
-        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10" data-aos="flip-up">
-            <div class="glass p-12 rounded-[50px] text-center border-2 border-transparent hover:border-orange-500 transition">
-                <span class="text-orange-500 font-bold text-sm tracking-widest uppercase">Paiement Cash</span>
-                <h4 class="text-6xl font-black mt-6 mb-6">3.500$</h4>
-                <p class="text-gray-400 italic">Prix préférentiel pour acquisition immédiate.</p>
-            </div>
-            <div class="glass p-12 rounded-[50px] text-center border-2 border-orange-500/50">
-                <span class="text-orange-500 font-bold text-sm tracking-widest uppercase">Formule Confort</span>
-                <h4 class="text-6xl font-black mt-6 mb-6">4.200$</h4>
-                <div class="text-left inline-block space-y-2 text-sm text-gray-300">
-                    <p>• Acompte : 2.000$</p>
-                    <p>• Mois 1 : 1.200$</p>
-                    <p>• Mois 2 : 1.000$</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION KOLWEZI -->
+    <!-- OFFRE KOLWEZI -->
     <section id="kolwezi" class="py-32 px-6 max-w-7xl mx-auto">
-        <div class="gold-grad rounded-[70px] p-10 md:p-24 text-black flex flex-col md:flex-row gap-16 items-center shadow-[0_30px_60px_rgba(0,0,0,0.4)]" data-aos="fade-up">
+        <div class="gold-grad rounded-[80px] p-12 md:p-24 text-black flex flex-col md:flex-row gap-16 items-center shadow-2xl" data-aos="fade-up">
             <div class="flex-1">
-                <span class="bg-black text-white px-6 py-2 rounded-full font-bold text-sm tracking-widest">OFFRE PROMOTIONNELLE</span>
-                <h2 class="text-6xl md:text-8xl font-title font-black mt-8 mb-6 leading-none">KOLWEZI</h2>
-                <p class="text-2xl font-bold mb-10 italic border-b-4 border-black inline-block">SITE JÉRUSALEM - LUALABA</p>
-                
-                <div class="bg-black text-white p-10 rounded-[45px] shadow-2xl">
-                    <p class="text-6xl font-black mb-4 tracking-tighter">4.200$</p>
-                    <p class="text-xl font-bold uppercase tracking-widest">Dimension : 25m x 20m</p>
-                    <p class="mt-6 opacity-70 italic font-semibold">À 10km de l'aéroport • Terrain cadastré • Malls & Facilités accessibles en voiture.</p>
+                <h2 class="text-7xl md:text-9xl font-title font-black mb-8 uppercase italic tracking-tighter leading-none">KOLWEZI</h2>
+                <div class="bg-black text-white p-12 rounded-[50px] shadow-2xl inline-block w-full">
+                    <p class="text-7xl font-black mb-4">4.200$</p>
+                    <p class="text-2xl font-bold uppercase tracking-widest italic border-b-2 border-orange-500 pb-4">Site Jérusalem - 25x20m</p>
+                    <p class="mt-8 text-lg font-light opacity-80 italic">À 10km de l'aéroport • Zone résidentielle & commerciale • Accès voiture facile.</p>
                 </div>
             </div>
-            <div class="w-full md:w-1/3 flex flex-col gap-6">
-                <div class="img-card shadow-2xl"><img src="https://i.postimg.cc/rdFYY5Vs/5.jpg"></div>
-                <div class="img-card shadow-2xl"><img src="https://i.postimg.cc/SJ6TSgjM/6.jpg"></div>
+            <div class="w-full md:w-1/3 flex flex-col gap-8">
+                <div class="img-card shadow-2xl border-black/20"><img src="https://i.postimg.cc/rdFYY5Vs/5.jpg"></div>
+                <div class="img-card shadow-2xl border-black/20"><img src="https://i.postimg.cc/SJ6TSgjM/6.jpg"></div>
             </div>
         </div>
     </section>
 
-    <!-- CONTACT & FOOTER VISIBLE -->
-    <footer id="contact" class="py-32 px-6 bg-black relative">
-        <div class="max-w-6xl mx-auto text-center">
-            <h2 class="text-5xl md:text-8xl font-title font-black mb-20 italic">PRÊT À <span class="text-orange-500">INVESTIR ?</span></h2>
+    <!-- FOOTER (Logo Géant) -->
+    <footer id="contact" class="py-40 px-6 bg-black text-center relative overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-6xl md:text-9xl font-title font-black mb-24 italic tracking-tighter opacity-80">DEVENIR <span class="text-orange-500">PROPRIÉTAIRE</span></h2>
             
-            <!-- Boutons de contact larges -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
-                <a href="https://wa.me/243840627003" class="glass p-12 rounded-[50px] hover:scale-105 transition border-green-500/30 group">
-                    <p class="text-green-500 font-black mb-4 tracking-[0.3em] text-xs">WHATSAPP DIRECT</p>
-                    <p class="text-2xl font-black group-hover:text-green-400 transition">Cliquez ici</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-32">
+                <a href="https://wa.me/243840627003" class="glass p-16 rounded-[60px] hover:scale-105 transition border-green-500 group shadow-2xl">
+                    <p class="text-green-500 font-black mb-6 tracking-widest text-sm uppercase">WhatsApp Agent</p>
+                    <p class="text-3xl font-black group-hover:text-green-400 transition">Discuter</p>
                 </a>
-                <a href="tel:+243840627003" class="glass p-12 rounded-[50px] hover:scale-105 transition group">
-                    <p class="text-orange-500 font-black mb-4 tracking-[0.3em] text-xs">APPEL RDC</p>
-                    <p class="text-2xl font-black group-hover:text-orange-400">+243 84 06 27 003</p>
+                <a href="tel:+243840627003" class="glass p-16 rounded-[60px] hover:scale-105 transition group shadow-2xl border-orange-500/30">
+                    <p class="text-orange-500 font-black mb-6 tracking-widest text-sm uppercase">Appel Direct</p>
+                    <p class="text-3xl font-black">+243 840 627 003</p>
                 </a>
-                <div class="glass p-12 rounded-[50px] border-white/20">
-                    <p class="text-blue-400 font-black mb-4 tracking-[0.3em] text-xs">USA & BELGIQUE</p>
-                    <p class="font-black text-lg opacity-90">+1 (518) 268-8562</p>
-                    <p class="font-black text-lg opacity-90">+32 496 89 39 96</p>
+                <div class="glass p-16 rounded-[60px] shadow-2xl">
+                    <p class="text-blue-400 font-black mb-6 tracking-widest text-sm uppercase">International</p>
+                    <p class="font-black text-xl opacity-90 mb-2">USA: +1 (518) 268-8562</p>
+                    <p class="font-black text-xl opacity-90">BEL: +32 496 89 39 96</p>
                 </div>
             </div>
 
-            <!-- LOGO DU BAS TRÈS VISIBLE -->
-            <div class="flex flex-col items-center gap-6" data-aos="fade-up">
-                <img src="logo_z_house.png" alt="Z.House Final" class="h-32 md:h-48 w-auto object-contain">
-                <div class="space-y-2">
-                    <p class="font-title font-black text-4xl md:text-6xl tracking-tighter text-white uppercase italic">Z.HOUSE DRC</p>
-                    <p class="text-orange-500 font-black text-sm md:text-lg tracking-[1.2em] uppercase">Réalisez vos rêves immobiliers</p>
+            <!-- LOGO FINAL ULTRA MASSIF -->
+            <div class="flex flex-col items-center gap-10" data-aos="fade-up">
+                <img src="logo_z_house.png" alt="Z.House Final" class="h-64 md:h-[500px] w-auto object-contain drop-shadow-[0_0_50px_rgba(243,156,18,0.3)]">
+                <div class="space-y-4">
+                    <p class="font-title font-black text-5xl md:text-8xl tracking-tighter text-white uppercase italic">Z.HOUSE DRC</p>
+                    <p class="text-orange-500 font-black text-lg md:text-3xl tracking-[1.5em] uppercase">Investissement Royal</p>
                 </div>
-                <p class="text-gray-500 text-sm mt-8 opacity-50">📧 z.housedrc@gmail.com | © 2024 Z.House - Tous droits réservés</p>
+                <p class="text-gray-600 text-sm mt-16 font-bold uppercase tracking-widest">z.housedrc@gmail.com | © 2024 Tous Droits Réservés</p>
             </div>
         </div>
     </footer>
 
-    <!-- Initialisation des animations -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ duration: 1200, once: true });
+        AOS.init({ duration: 1500, once: true });
     </script>
 </body>
-                        </html>
+</html>
