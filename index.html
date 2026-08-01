@@ -3,212 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Z.House | Investissement Immobilier</title>
-    <!-- Tailwind CSS -->
+    <title>Z.House | Terrains d'Exception</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <!-- AOS Animation Library -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
-        :root {
-            --forest-green: #062c16;
-            --gold: #f39c12;
-            --glass: rgba(255, 255, 255, 0.1);
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--forest-green);
-            color: white;
-            overflow-x: hidden;
-        }
-        h1, h2, .font-title { font-family: 'Montserrat', sans-serif; }
-
-        /* Animation de flottaison futuriste */
-        @keyframes float {
-            0% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(1deg); }
-            100% { transform: translateY(0px) rotate(0deg); }
-        }
-        .floating { animation: float 6s ease-in-out infinite; }
-
-        /* Effet de verre (Glassmorphism) */
-        .glass-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 24px;
-        }
-
-        .gold-gradient {
-            background: linear-gradient(135deg, #f39c12, #e67e22);
-        }
-
-        .hero-gradient {
-            background: radial-gradient(circle at center, #0b4d26 0%, #062c16 100%);
-        }
+        :root { --forest: #062c16; --gold: #f39c12; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--forest); color: white; }
+        .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .gold-grad { background: linear-gradient(135deg, #f39c12, #e67e22); }
         
-        .pulse-gold {
-            box-shadow: 0 0 0 0 rgba(243, 156, 18, 0.4);
-            animation: pulse 2s infinite;
+        /* Animation flottante */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
         }
-        @keyframes pulse {
-            70% { box-shadow: 0 0 0 20px rgba(243, 156, 18, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(243, 156, 18, 0); }
+        .floating { animation: float 5s ease-in-out infinite; }
+        
+        /* Style des images de la galerie */
+        .img-card { 
+            position: relative; 
+            overflow: hidden; 
+            border-radius: 20px; 
+            height: 300px;
+            transition: all 0.5s ease;
         }
+        .img-card img { 
+            width: 100%; height: 100%; object-fit: cover; 
+            transition: transform 0.5s ease;
+        }
+        .img-card:hover img { transform: scale(1.1); }
+        .img-card:hover { border: 2px solid #f39c12; box-shadow: 0 0 20px rgba(243, 156, 18, 0.4); }
     </style>
 </head>
-<body class="hero-gradient">
+<body>
 
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 px-6 py-4">
-        <div class="max-w-7xl mx-auto flex justify-between items-center glass-card px-6 py-3">
-            <div class="flex items-center space-x-2">
-                <div class="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center font-bold text-white">Z</div>
-                <span class="font-bold text-xl tracking-tighter">Z.HOUSE</span>
+    <!-- Nav -->
+    <nav class="fixed w-full z-50 p-4">
+        <div class="max-w-6xl mx-auto glass rounded-2xl p-4 flex justify-between items-center">
+            <span class="font-black text-xl tracking-tighter">Z.HOUSE</span>
+            <div class="space-x-4 text-xs font-bold uppercase tracking-widest">
+                <a href="#moanda">Moanda</a>
+                <a href="#kolwezi">Kolwezi</a>
+                <a href="#contact" class="gold-grad px-4 py-2 rounded-lg">Contact</a>
             </div>
-            <a href="#contact" class="gold-gradient px-5 py-2 rounded-full text-sm font-bold pulse-gold">Investir</a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center justify-center pt-20 px-6 overflow-hidden">
-        <!-- Éléments flottants décoratifs -->
-        <div class="absolute top-20 left-10 w-32 h-32 bg-orange-500/20 rounded-full blur-3xl floating"></div>
-        <div class="absolute bottom-20 right-10 w-64 h-64 bg-green-500/10 rounded-full blur-3xl floating" style="animation-delay: 2s;"></div>
+    <!-- Hero -->
+    <section class="min-h-screen flex items-center justify-center pt-20 px-6 relative overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-30">
+            <!-- Image de fond principale -->
+            <img src="METS_TON_LIEN_ICI_IMAGE_PRINCIPALE" class="w-full h-full object-cover">
+        </div>
+        <div class="text-center z-10" data-aos="fade-up">
+            <h1 class="text-5xl md:text-7xl font-black mb-6 uppercase">Respirez l'air <br><span class="text-orange-500 underline">de la nature</span></h1>
+            <p class="max-w-xl mx-auto text-gray-300 mb-8">Investissez à Moanda et Kolwezi dans un cadre exceptionnel et sécurisé.</p>
+            <p class="text-xs font-bold text-orange-400 mb-10 tracking-[0.5em]">RÉALISEZ VOS RÊVES IMMOBILIERS</p>
+        </div>
+    </section>
 
-        <div class="text-center z-10" data-aos="zoom-out" data-aos-duration="1500">
-            <h2 class="text-orange-400 font-bold tracking-widest mb-4">MOANDA | LUALABA</h2>
-            <h1 class="text-5xl md:text-8xl font-black mb-6 leading-tight">
-                RESPIREZ L’AIR <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-200">DE LA NATURE</span>
-            </h1>
-            <p class="max-w-2xl mx-auto text-gray-300 text-lg mb-10 leading-relaxed">
-                Offrez-vous un terrain dans un environnement calme, verdoyant et riche en opportunités. Réalisez vos rêves immobiliers.
-            </p>
-            <div class="flex flex-col md:flex-row justify-center gap-4">
-                <a href="#moanda" class="gold-gradient px-8 py-4 rounded-2xl font-bold text-lg hover:scale-105 transition">Moanda dès 3.500$</a>
-                <a href="#kolwezi" class="glass-card px-8 py-4 rounded-2xl font-bold text-lg hover:bg-white/10 transition">Offre Kolwezi</a>
+    <!-- GALERIE MOANDA -->
+    <section id="moanda" class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="mb-12" data-aos="fade-right">
+            <h2 class="text-3xl font-black uppercase">Focus sur <span class="text-orange-500">Moanda</span></h2>
+            <p class="text-gray-400">À proximité du Port de Banana et du littoral.</p>
+        </div>
+
+        <!-- Grille de photos Moanda -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Photo 1 -->
+            <div class="img-card floating" data-aos="fade-up" style="animation-delay: 0s;">
+                <img src="METS_TON_LIEN_ICI_PHOTO_MOANDA_1">
+                <div class="absolute bottom-4 left-4 glass p-2 rounded-lg text-xs">Vue du site</div>
+            </div>
+            <!-- Photo 2 -->
+            <div class="img-card floating" data-aos="fade-up" style="animation-delay: 0.5s;">
+                <img src="METS_TON_LIEN_ICI_PHOTO_MOANDA_2">
+                <div class="absolute bottom-4 left-4 glass p-2 rounded-lg text-xs">Accès route</div>
+            </div>
+            <!-- Photo 3 -->
+            <div class="img-card floating" data-aos="fade-up" style="animation-delay: 1s;">
+                <img src="METS_TON_LIEN_ICI_PHOTO_MOANDA_3">
+                <div class="absolute bottom-4 left-4 glass p-2 rounded-lg text-xs">Environnement</div>
+            </div>
+        </div>
+
+        <!-- Détails Moanda -->
+        <div class="mt-12 glass p-8 rounded-[30px] grid grid-cols-1 md:grid-cols-2 gap-8 items-center" data-aos="zoom-in">
+            <div>
+                <p class="text-orange-500 font-bold mb-2">• ACCESSIBLE DÈS 3 500 USD</p>
+                <p class="text-gray-300 mb-4 text-sm">Le site est situé à proximité du centre-ville, de la Zone Économique Spéciale et du port de Banana.</p>
+                <div class="flex gap-4">
+                    <div class="bg-white/10 p-4 rounded-xl text-center flex-1">
+                        <p class="text-xl font-bold">20x20m</p>
+                        <p class="text-[10px] uppercase text-gray-400">Dimension</p>
+                    </div>
+                    <div class="bg-white/10 p-4 rounded-xl text-center flex-1">
+                        <p class="text-xl font-bold">50</p>
+                        <p class="text-[10px] uppercase text-gray-400">Terrains</p>
+                    </div>
+                </div>
+            </div>
+            <div class="gold-grad p-6 rounded-2xl text-black">
+                <p class="font-bold uppercase text-xs mb-2 italic">Offre coup de cœur</p>
+                <p class="text-sm font-semibold">Formule Confort : 4.200$</p>
+                <p class="text-xs">Avance 2.000$ / 1.200$ (Mois 1) / 1.000$ (Mois 2)</p>
             </div>
         </div>
     </section>
 
-    <!-- Pourquoi Moanda -->
-    <section id="moanda" class="py-24 px-6 max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div data-aos="fade-right">
-                <h2 class="text-4xl font-bold mb-8">Investissez au cœur de <span class="text-orange-500">Moanda</span></h2>
-                <div class="space-y-6">
-                    <div class="flex items-start space-x-4">
-                        <div class="bg-orange-500/20 p-3 rounded-lg text-orange-400">⚓</div>
-                        <div>
-                            <h4 class="font-bold text-xl">Port de Banana</h4>
-                            <p class="text-gray-400">À proximité du futur port en eau profonde, moteur économique majeur.</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start space-x-4">
-                        <div class="bg-orange-500/20 p-3 rounded-lg text-orange-400">🏖</div>
-                        <div>
-                            <h4 class="font-bold text-xl">Littoral & Plages</h4>
-                            <p class="text-gray-400">Profitez du magnifique océan Atlantique à quelques minutes de chez vous.</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start space-x-4">
-                        <div class="bg-orange-500/20 p-3 rounded-lg text-orange-400">🏛</div>
-                        <div>
-                            <h4 class="font-bold text-xl">Marmite des Esclaves</h4>
-                            <p class="text-gray-400">Un cadre riche en culture et en histoire entre fleuve et océan.</p>
-                        </div>
-                    </div>
-                </div>
+    <!-- GALERIE KOLWEZI -->
+    <section id="kolwezi" class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="mb-12 text-right" data-aos="fade-left">
+            <h2 class="text-3xl font-black uppercase">Promotion <span class="text-orange-500">Kolwezi</span></h2>
+            <p class="text-gray-400">Site Jérusalem - Nouvelle Commune</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Photo Kolwezi 1 -->
+            <div class="img-card" data-aos="zoom-in">
+                <img src="METS_TON_LIEN_ICI_PHOTO_KOLWEZI_1">
+                <div class="absolute top-4 right-4 bg-orange-500 px-3 py-1 rounded-full text-xs font-bold">4.200$</div>
             </div>
-            <div class="relative" data-aos="fade-left">
-                <div class="glass-card p-4 floating">
-                    <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=1000" alt="Terrain" class="rounded-xl">
-                    <div class="absolute -bottom-6 -left-6 gold-gradient p-6 rounded-2xl shadow-2xl">
-                        <p class="text-sm uppercase font-bold opacity-80">Disponibilité</p>
-                        <p class="text-3xl font-black">50 TERRAINS</p>
-                        <p class="text-xs mt-2">Dimension 20m x 20m (400m²)</p>
-                    </div>
-                </div>
+            <!-- Photo Kolwezi 2 -->
+            <div class="img-card" data-aos="zoom-in" data-aos-delay="200">
+                <img src="METS_TON_LIEN_ICI_PHOTO_KOLWEZI_2">
+                <div class="absolute top-4 right-4 bg-orange-500 px-3 py-1 rounded-full text-xs font-bold">25x20m</div>
             </div>
+        </div>
+        
+        <div class="mt-8 text-center text-gray-400 text-sm italic">
+            <p>À 10km de l'aéroport, terrain cadastré, accessible avec voiture.</p>
         </div>
     </section>
 
-    <!-- Tarifs Moanda -->
-    <section class="py-20 bg-black/30">
-        <div class="max-w-5xl mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-12">L'offre Coup de Cœur - Moanda</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Cash -->
-                <div class="glass-card p-10 hover:border-orange-500/50 transition border-transparent border-2" data-aos="flip-left">
-                    <h3 class="text-2xl font-bold mb-4">Option CASH</h3>
-                    <div class="text-5xl font-black text-orange-500 mb-6">3.500$</div>
-                    <p class="text-gray-400">Le prix idéal pour concrétiser votre premier investissement foncier immédiatement.</p>
-                </div>
-                <!-- Confort -->
-                <div class="glass-card p-10 hover:border-orange-500/50 transition border-transparent border-2" data-aos="flip-right">
-                    <h3 class="text-2xl font-bold mb-4">Option CONFORT</h3>
-                    <div class="text-5xl font-black text-white mb-6">4.200$</div>
-                    <ul class="text-left space-y-3 text-gray-300">
-                        <li>✅ 2.000$ à l'avance</li>
-                        <li>✅ 1.200$ après 1 mois</li>
-                        <li>✅ 1.000$ après 2 mois</li>
-                    </ul>
+    <!-- Footer Contact -->
+    <footer id="contact" class="py-20 px-6 bg-black/40">
+        <div class="max-w-4xl mx-auto glass p-10 rounded-[40px] text-center border-orange-500/30">
+            <h2 class="text-3xl font-black mb-8 italic">Contactez un agent</h2>
+            <div class="space-y-4 text-xl font-bold">
+                <p class="text-orange-500">📧 z.housedrc@gmail.com</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mt-8">
+                    <div class="p-4 bg-white/5 rounded-xl border border-white/10">RDC <br> +243 84 06 27 003</div>
+                    <div class="p-4 bg-white/5 rounded-xl border border-white/10">USA <br> +1 (518) 268-8562</div>
+                    <div class="p-4 bg-white/5 rounded-xl border border-white/10">BELGIQUE <br> +32 496 89 39 96</div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Offre Kolwezi -->
-    <section id="kolwezi" class="py-24 px-6">
-        <div class="max-w-7xl mx-auto gold-gradient rounded-[40px] p-8 md:p-16 flex flex-col md:flex-row items-center gap-12" data-aos="zoom-in">
-            <div class="flex-1">
-                <span class="bg-black text-white px-4 py-1 rounded-full text-sm font-bold">OFFRE PROMOTIONNELLE</span>
-                <h2 class="text-4xl md:text-6xl font-black mt-6 mb-4">KOLWEZI - LUALABA</h2>
-                <p class="text-xl mb-8 opacity-90 text-black font-semibold">Site JÉRUSALEM à 10km de l'aéroport. Terrain cadastré avec toutes les facilités (Malls, accessible en voiture).</p>
-                <div class="bg-black/10 p-6 rounded-2xl mb-8">
-                    <p class="text-4xl font-black">4.200$ <span class="text-lg font-normal">/ 25x20m</span></p>
-                    <p class="mt-2 font-bold uppercase text-sm">Paiement en 2 tranches (2.200$ + 2.000$)</p>
-                </div>
-            </div>
-            <div class="bg-white text-black p-8 rounded-3xl text-center">
-                <p class="text-sm font-bold uppercase tracking-widest mb-2">Usage</p>
-                <p class="text-2xl font-black">RÉSIDENTIEL OU COMMERCIAL</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Footer -->
-    <footer id="contact" class="py-20 px-6 border-t border-white/10">
-        <div class="max-w-7xl mx-auto text-center">
-            <h2 class="text-4xl font-black mb-12">Contactez <span class="text-orange-500">Z.House</span></h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 text-lg">
-                <div class="glass-card p-6">
-                    <p class="text-orange-500 font-bold mb-2">Email</p>
-                    <p>z.housedrc@gmail.com</p>
-                </div>
-                <div class="glass-card p-6">
-                    <p class="text-orange-500 font-bold mb-2">WhatsApp / Tel</p>
-                    <p>RDC : +243 84 06 27 003</p>
-                </div>
-                <div class="glass-card p-6">
-                    <p class="text-orange-500 font-bold mb-2">International</p>
-                    <p>USA : +1 (518) 268-8562</p>
-                    <p>BEL : +32 496 89 39 96</p>
-                </div>
-            </div>
-            <p class="italic text-gray-500 mb-4">"Réalisez vos rêves immobiliers"</p>
-            <div class="font-bold text-2xl tracking-tighter opacity-50">Z.HOUSE DRC</div>
-        </div>
+        <p class="text-center mt-10 text-xs text-gray-600">© 2024 Z.HOUSE - RÉALISEZ VOS RÊVES IMMOBILIERS</p>
     </footer>
 
-    <!-- AOS Script -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 1000,
-            once: true
-        });
-    </script>
+    <script> AOS.init(); </script>
 </body>
 </html>
