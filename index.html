@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Z.House | Immobilier de Prestige</title>
+    <title>Z.House | Investissement Foncier</title>
     
     <!-- Frameworks & Fonts -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <style>
@@ -15,179 +15,179 @@
         body { font-family: 'Inter', sans-serif; background-color: var(--green); color: white; overflow-x: hidden; }
         .font-title { font-family: 'Montserrat', sans-serif; }
         
-        /* Effet de Verre Futuriste */
-        .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        /* Glassmorphism équilibré */
+        .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
         .gold-grad { background: linear-gradient(135deg, #f39c12, #e67e22); }
         
-        /* Animation flottante */
-        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-20px); } }
-        .floating { animation: float 6s ease-in-out infinite; }
+        /* Animation flottante subtile */
+        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
+        .floating { animation: float 5s ease-in-out infinite; }
 
-        /* Overlay Hero */
-        .hero-overlay { background: linear-gradient(to bottom, rgba(6, 44, 22, 0.3), rgba(6, 44, 22, 1)); }
-
-        /* Style des cartes images agrandies */
-        .img-card { 
+        /* Style des images rééquilibré */
+        .img-container { 
             overflow: hidden; 
-            border-radius: 40px; 
-            border: 2px solid rgba(243, 156, 18, 0.2); 
-            transition: 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); 
+            border-radius: 24px; 
+            border: 1px solid rgba(243, 156, 18, 0.2); 
+            transition: 0.4s ease;
             background: #000;
         }
-        .img-card:hover { 
-            border-color: var(--gold); 
-            transform: scale(1.02); 
-            box-shadow: 0 30px 60px rgba(0,0,0,0.8); 
-        }
-        .img-card img { 
-            transition: 0.8s; 
-            width: 100%; 
-            height: 500px; /* Taille augmentée pour les photos standards */
-            object-fit: cover; 
-        }
-        .img-card:hover img { transform: scale(1.1); }
+        .img-container:hover { border-color: var(--gold); transform: translateY(-5px); }
+        .img-container img { transition: 0.6s; width: 100%; height: 350px; object-fit: cover; }
+        .img-container:hover img { transform: scale(1.08); }
 
-        /* Spécial pour les 2 dernières photos */
-        .img-large img { 
-            height: 700px !important; /* Taille géante pour Kolwezi */
-        }
+        /* Spécial Kolwezi (Photos mis en avant) */
+        .img-kolwezi img { height: 450px; }
 
         html { scroll-behavior: smooth; }
     </style>
 </head>
 <body>
 
-    <!-- BARRE DE NAVIGATION (Logo Massif) -->
-    <nav class="fixed w-full z-50 p-4 md:p-6">
-        <div class="max-w-[1600px] mx-auto glass rounded-[50px] p-6 flex justify-between items-center px-10 md:px-20">
-            <div class="flex items-center gap-10">
-                <!-- LOGO ULTRA AGRANDI -->
-                <img src="logo_z_house.png" alt="Z.House Logo" class="h-28 md:h-48 w-auto object-contain transition-transform duration-500 hover:scale-110">
-                <div class="hidden xl:block border-l-4 border-orange-500 pl-10">
-                    <p class="text-lg uppercase tracking-[0.6em] text-orange-500 font-black italic leading-tight">RÉALISEZ VOS RÊVES<br>IMMOBILIERS</p>
+    <!-- NAVBAR (Rééquilibrée) -->
+    <nav class="fixed w-full z-50 p-4">
+        <div class="max-w-6xl mx-auto glass rounded-3xl p-3 flex justify-between items-center px-6 md:px-10">
+            <div class="flex items-center gap-4">
+                <!-- Logo taille normale et pro -->
+                <img src="logo_z_house.png" alt="Z.House" class="h-12 md:h-16 w-auto object-contain">
+                <div class="hidden sm:block border-l border-white/20 pl-4">
+                    <p class="text-[9px] uppercase tracking-[0.3em] text-orange-500 font-bold leading-none">Réalisez vos rêves immobiliers</p>
                 </div>
             </div>
-            <a href="https://wa.me/243840627003" class="gold-grad text-black font-black text-lg px-12 py-6 rounded-[30px] shadow-2xl hover:scale-105 transition uppercase">WhatsApp</a>
+            <a href="https://wa.me/243840627003" class="gold-grad text-black font-black text-[10px] md:text-xs px-6 py-3 rounded-xl shadow-lg hover:scale-105 transition uppercase tracking-widest">
+                WhatsApp
+            </a>
         </div>
     </nav>
 
-    <!-- ACCUEIL (HERO) -->
-    <section class="relative min-h-screen flex items-center justify-center pt-40">
+    <!-- HERO SECTION -->
+    <section class="relative min-h-screen flex items-center justify-center pt-20">
         <div class="absolute inset-0 z-0">
             <img src="https://i.postimg.cc/wy149Hsz/banner.jpg" class="w-full h-full object-cover">
-            <div class="absolute inset-0 hero-overlay"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-green-900/40 via-green-900/60 to-[#062c16]"></div>
         </div>
 
-        <div class="relative z-10 text-center px-6" data-aos="zoom-out" data-aos-duration="1500">
-            <h1 class="text-7xl md:text-[10rem] font-title font-black mb-10 leading-none tracking-tighter">
-                L'AIR PUR <br> <span class="text-orange-500 italic uppercase">NATUREL</span>
+        <div class="relative z-10 text-center px-6" data-aos="fade-up" data-aos-duration="1200">
+            <h1 class="text-4xl md:text-7xl font-title font-black mb-6 leading-tight uppercase tracking-tighter">
+                RESPIREZ L’AIR <br> <span class="text-orange-500 italic">DE LA NATURE</span>
             </h1>
-            <p class="max-w-5xl mx-auto text-gray-200 text-3xl md:text-5xl mb-16 font-light italic leading-tight">
-                Investissez à Moanda, dans un cadre de prestige.
+            <p class="max-w-2xl mx-auto text-gray-200 text-lg md:text-xl mb-10 font-light italic">
+                Investissez à Moanda, au cœur de la nature. Un environnement calme, verdoyant et riche en opportunités stratégiques.
             </p>
-            <div class="flex flex-col md:flex-row justify-center gap-10">
-                <a href="#moanda" class="gold-grad px-20 py-8 rounded-[40px] font-black text-black text-3xl hover:shadow-[0_0_60px_rgba(243,156,18,0.6)] transition uppercase">Nos Terrains</a>
-                <a href="#contact" class="glass px-20 py-8 rounded-[40px] font-black text-3xl hover:bg-white/10 transition border-2 border-white/20 uppercase">Contact</a>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#moanda" class="gold-grad px-10 py-4 rounded-2xl font-black text-black hover:shadow-xl transition">NOS TERRAINS</a>
+                <a href="#contact" class="glass px-10 py-4 rounded-2xl font-black hover:bg-white/5 transition border border-white/10">NOUS CONTACTER</a>
             </div>
         </div>
     </section>
 
-    <!-- SECTION MOANDA - PHOTOS AGRANDIES -->
-    <section id="moanda" class="py-40 px-6 max-w-[1600px] mx-auto">
-        <div class="text-center mb-32" data-aos="fade-up">
-            <h2 class="text-orange-500 font-black tracking-[0.8em] text-xl uppercase mb-6 italic">Z.House Moanda</h2>
-            <h3 class="text-7xl md:text-[8rem] font-title font-black uppercase tracking-tighter leading-none">VUE SUR L'OCÉAN</h3>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-20 mb-20">
-            <!-- Colonne Texte -->
-            <div class="space-y-12" data-aos="fade-right">
-                <div class="glass p-16 rounded-[60px] border-l-[15px] border-orange-500 shadow-3xl">
-                    <p class="text-gray-200 leading-relaxed text-3xl font-light italic">
-                        Proche du <span class="text-orange-500 font-bold">Port de Banana</span>. Un emplacement stratégique entre l’Océan et le Fleuve Congo.
-                    </p>
+    <!-- SECTION MOANDA -->
+    <section id="moanda" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div class="space-y-8" data-aos="fade-right">
+                <div>
+                    <h2 class="text-orange-500 font-bold tracking-widest text-xs uppercase mb-2">Moanda - RDC</h2>
+                    <h3 class="text-4xl font-title font-black uppercase italic leading-none">Un Cadre Exceptionnel</h3>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-10">
-                    <div class="glass p-12 rounded-[50px] text-center border-2 border-orange-500/20">
-                        <p class="text-xl uppercase text-gray-400 mb-4 font-bold tracking-widest">Dès</p>
-                        <p class="text-7xl font-black text-orange-500 italic">3.500$</p>
+                <p class="text-gray-300 leading-relaxed italic text-lg">
+                    À proximité du <strong>Port de Banana</strong> et de la Zone Économique Spéciale. Un investissement sécurisé entre l’Océan Atlantique et le Fleuve Congo.
+                </p>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="glass p-6 rounded-2xl">
+                        <p class="text-xs uppercase text-gray-400 mb-1 font-bold">Prix Cash</p>
+                        <p class="text-3xl font-black text-orange-500 tracking-tighter">3.500$</p>
                     </div>
-                    <div class="glass p-12 rounded-[50px] text-center border-2 border-orange-500/20">
-                        <p class="text-xl uppercase text-gray-400 mb-4 font-bold tracking-widest">Surface</p>
-                        <p class="text-7xl font-black italic">20x20m</p>
+                    <div class="glass p-6 rounded-2xl">
+                        <p class="text-xs uppercase text-gray-400 mb-1 font-bold">Dimension</p>
+                        <p class="text-3xl font-black tracking-tighter italic">20x20m</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Grille Photos Moanda (4 Photos) -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                <div class="img-card floating" data-aos="zoom-in"><img src="https://i.postimg.cc/XZHDMXq9/1.jpg"></div>
-                <div class="img-card floating" style="animation-delay: 1s;" data-aos="zoom-in"><img src="https://i.postimg.cc/DWjYVm0p/2.jpg"></div>
-                <div class="img-card floating" style="animation-delay: 0.5s;" data-aos="zoom-in"><img src="https://i.postimg.cc/ThWNSd6g/3.jpg"></div>
-                <div class="img-card floating" style="animation-delay: 1.5s;" data-aos="zoom-in"><img src="https://i.postimg.cc/kR8jtccw/4.jpg"></div>
+            <!-- Grille Moanda rééquilibrée -->
+            <div class="grid grid-cols-2 gap-4">
+                <div class="img-container floating" data-aos="zoom-in"><img src="https://i.postimg.cc/XZHDMXq9/1.jpg"></div>
+                <div class="img-container floating" style="animation-delay: 1s;" data-aos="zoom-in"><img src="https://i.postimg.cc/DWjYVm0p/2.jpg"></div>
+                <div class="img-container floating" style="animation-delay: 0.5s;" data-aos="zoom-in"><img src="https://i.postimg.cc/ThWNSd6g/3.jpg"></div>
+                <div class="img-container floating" style="animation-delay: 1.5s;" data-aos="zoom-in"><img src="https://i.postimg.cc/kR8jtccw/4.jpg"></div>
             </div>
         </div>
     </section>
 
-    <!-- SECTION KOLWEZI - LES 2 DERNIÈRES PHOTOS (GÉANTES) -->
-    <section id="kolwezi" class="py-40 bg-black/40">
-        <div class="max-w-[1600px] mx-auto px-6">
-            <div class="gold-grad rounded-[100px] p-16 md:p-32 text-black mb-20 shadow-3xl" data-aos="fade-up">
-                <div class="text-center mb-20">
-                    <span class="bg-black text-white px-10 py-4 rounded-full font-black text-xl tracking-[0.5em] uppercase">OFFRE KOLWEZI</span>
-                    <h2 class="text-8xl md:text-[12rem] font-title font-black mt-12 mb-10 tracking-tighter italic leading-none">SITE JÉRUSALEM</h2>
-                    <p class="text-4xl font-light italic opacity-90">Terrain cadastré • 25m x 20m • 4.200$</p>
-                </div>
-
-                <!-- LES DEUX DERNIÈRES PHOTOS EN FORMAT GÉANT -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                    <div class="img-card img-large shadow-[0_40px_80px_rgba(0,0,0,0.6)] border-black/40" data-aos="fade-up">
-                        <img src="https://i.postimg.cc/rdFYY5Vs/5.jpg">
-                    </div>
-                    <div class="img-card img-large shadow-[0_40px_80px_rgba(0,0,0,0.6)] border-black/40" data-aos="fade-up" data-aos-delay="200">
-                        <img src="https://i.postimg.cc/SJ6TSgjM/6.jpg">
-                    </div>
+    <!-- FORMULES DE PAIEMENT -->
+    <section class="py-16 px-6">
+        <div class="max-w-4xl mx-auto glass rounded-[40px] flex flex-col md:flex-row shadow-2xl overflow-hidden" data-aos="flip-up">
+            <div class="flex-1 p-10 border-b md:border-b-0 md:border-r border-white/10 text-center">
+                <span class="text-orange-500 font-bold text-xs uppercase tracking-widest">Option Cash</span>
+                <h4 class="text-4xl font-black mt-4 mb-2 italic">3.500$</h4>
+                <p class="text-xs text-gray-400 italic">Acquisition immédiate du terrain.</p>
+            </div>
+            <div class="flex-1 p-10 bg-white/5 text-center">
+                <span class="text-orange-500 font-bold text-xs uppercase tracking-widest">Option Confort</span>
+                <h4 class="text-4xl font-black mt-4 mb-4 italic">4.200$</h4>
+                <div class="text-left inline-block text-[11px] text-gray-300 space-y-1 opacity-80 uppercase tracking-tighter">
+                    <p>• Acompte : 2.000$</p>
+                    <p>• Mois 1 : 1.200$</p>
+                    <p>• Mois 2 : 1.000$</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER (Logo et Marque Ultra Massifs) -->
-    <footer id="contact" class="py-60 px-6 bg-black relative">
-        <div class="max-w-[1600px] mx-auto text-center">
-            <h2 class="text-7xl md:text-[10rem] font-title font-black mb-32 italic tracking-tighter">PRÊT À <span class="text-orange-500 uppercase">BÂTIR ?</span></h2>
+    <!-- SECTION KOLWEZI (Focus photos) -->
+    <section id="kolwezi" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="gold-grad rounded-[40px] p-8 md:p-16 text-black flex flex-col lg:flex-row gap-12 items-center" data-aos="fade-up">
+            <div class="flex-1 space-y-6">
+                <h2 class="text-5xl md:text-7xl font-title font-black uppercase italic leading-none tracking-tighter">Offre Kolwezi</h2>
+                <div class="bg-black text-white p-8 rounded-3xl">
+                    <p class="text-4xl font-black mb-2 italic">4.200$ <span class="text-sm font-normal opacity-60">/ 25x20m</span></p>
+                    <p class="text-xs uppercase font-bold tracking-widest opacity-80">Site Jérusalem - Lualaba</p>
+                    <p class="mt-4 text-xs italic opacity-70">À 10km de l'aéroport • Terrain cadastré • Toutes facilités commerciales.</p>
+                </div>
+            </div>
+            <!-- Dernières photos Kolwezi -->
+            <div class="w-full lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="img-container img-kolwezi shadow-xl"><img src="https://i.postimg.cc/rdFYY5Vs/5.jpg"></div>
+                <div class="img-container img-kolwezi shadow-xl"><img src="https://i.postimg.cc/SJ6TSgjM/6.jpg"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER & CONTACT (Rééquilibré) -->
+    <footer id="contact" class="py-24 px-6 text-center border-t border-white/5 bg-black/40">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-4xl md:text-6xl font-title font-black mb-16 italic tracking-tighter">PRÊT À <span class="text-orange-500 uppercase">INVESTIR ?</span></h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-40">
-                <a href="https://wa.me/243840627003" class="glass p-20 rounded-[80px] hover:scale-105 transition border-green-500/50 group shadow-3xl">
-                    <p class="text-green-500 font-black mb-8 tracking-[0.5em] text-xl uppercase">WhatsApp Direct</p>
-                    <p class="text-4xl font-black group-hover:text-green-400 transition italic">Discuter</p>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-20 text-center">
+                <a href="https://wa.me/243840627003" class="glass p-8 rounded-3xl hover:scale-105 transition group">
+                    <p class="text-green-500 font-bold mb-3 tracking-widest text-[10px] uppercase italic">WhatsApp Direct</p>
+                    <p class="text-lg font-black group-hover:text-green-400">Conseiller</p>
                 </a>
-                <a href="tel:+243840627003" class="glass p-20 rounded-[80px] hover:scale-105 transition group shadow-3xl border-orange-500/50">
-                    <p class="text-orange-500 font-black mb-8 tracking-[0.5em] text-xl uppercase">Appel RDC</p>
-                    <p class="text-4xl font-black group-hover:text-orange-400 transition italic">+243 840 627 003</p>
+                <a href="tel:+243840627003" class="glass p-8 rounded-3xl hover:scale-105 transition group">
+                    <p class="text-orange-500 font-bold mb-3 tracking-widest text-[10px] uppercase italic">Appel RDC</p>
+                    <p class="text-lg font-black">+243 840 627 003</p>
                 </a>
-                <div class="glass p-20 rounded-[80px] shadow-3xl">
-                    <p class="text-blue-400 font-black mb-8 tracking-[0.5em] text-xl uppercase">International</p>
-                    <p class="font-black text-2xl mb-4 italic">+1 (518) 268-8562 (USA)</p>
-                    <p class="font-black text-2xl italic">+32 496 89 39 96 (BEL)</p>
+                <div class="glass p-8 rounded-3xl italic">
+                    <p class="text-blue-400 font-bold mb-3 tracking-widest text-[10px] uppercase">Inter.</p>
+                    <p class="text-xs font-bold opacity-80">USA: +1 518 268-8562</p>
+                    <p class="text-xs font-bold opacity-80">BEL: +32 496 89 39 96</p>
                 </div>
             </div>
 
-            <!-- LOGO FINAL ULTRA GÉANT -->
-            <div class="flex flex-col items-center gap-16" data-aos="fade-up">
-                <img src="logo_z_house.png" alt="Z.House Final" class="h-80 md:h-[600px] w-auto object-contain drop-shadow-[0_0_100px_rgba(243,156,18,0.4)]">
-                <div class="space-y-6">
-                    <p class="font-title font-black text-6xl md:text-[9rem] tracking-tighter text-white uppercase italic leading-none">Z.HOUSE DRC</p>
-                    <p class="text-orange-500 font-black text-2xl md:text-5xl tracking-[1.8em] uppercase">Investissement Royal</p>
+            <!-- Signature Finale -->
+            <div class="flex flex-col items-center gap-6" data-aos="fade-up">
+                <img src="logo_z_house.png" alt="Z.House" class="h-24 md:h-32 w-auto object-contain">
+                <div class="space-y-1">
+                    <p class="font-title font-black text-3xl md:text-5xl tracking-tighter text-white uppercase italic">Z.HOUSE DRC</p>
+                    <p class="text-orange-500 font-bold text-[10px] md:text-sm tracking-[0.8em] uppercase">Investissement de confiance</p>
                 </div>
-                <p class="text-gray-500 text-xl mt-32 font-bold uppercase tracking-widest opacity-40 italic">© 2024 Z.House - L'excellence immobilière</p>
+                <p class="text-gray-600 text-[10px] mt-8 uppercase tracking-widest">📧 z.housedrc@gmail.com | © 2024</p>
             </div>
         </div>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ duration: 1500, once: true });
+        AOS.init({ duration: 1000, once: true });
     </script>
 </body>
-</html>
+                    </html>
